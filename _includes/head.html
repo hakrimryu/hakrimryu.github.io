@@ -149,7 +149,7 @@
     crossorigin="anonymous"
   ></script>
 
-  <script>
+  <!-- <script>
     (function(d, h, m) {
       var js,
         fjs = d.getElementsByTagName(h)[0];
@@ -167,9 +167,26 @@
       js.src = "https://makerwidget.com/js/embed.js";
       fjs.parentNode.insertBefore(js, fjs);
     })(document, "script", "dhm");
-  </script>
+  </script>-->
+
+
+  <script>
+    (function(d, h, m){
+        var js, fjs = d.getElementsByTagName(h)[0];
+        if (d.getElementById(m)){return;}
+        js = d.createElement(h); js.id = m;
+        js.onload = function(){
+            window.makerWidgetComInit({
+            position: "left",          
+            widget: "60w6wlvj2fykvzyc-hgzi6auh9gjxqbxp-kbfvjqw2jopyaxu1"                
+        })};
+        js.src = "https://makerwidget.com/js/embed.js";
+        fjs.parentNode.insertBefore(js, fjs)
+    }(document, "script", "dhm"))
+</script>
+
   <!-- buy me a coffeee -->
-  <script
+  <!--<script
     data-name="BMC-Widget"
     src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
     data-id="sujaykundu"
@@ -179,5 +196,5 @@
     data-position="right"
     data-x_margin="10"
     data-y_margin="10"
-  ></script>
+  ></script>-->
 </head>
