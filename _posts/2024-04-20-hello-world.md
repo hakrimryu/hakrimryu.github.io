@@ -8,4 +8,4 @@ tags: [favicon]
 ### TESTPOST
 Hello World!
 
-![Desktop View](/assets/img/post/avatar.png)
+![image-20240421024305232](../assets/img/post/2024-04-20-hello-world/image-20240421024305232.png)
