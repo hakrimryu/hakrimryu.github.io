@@ -7,3 +7,5 @@ tags: [favicon]
 ---
 ### TESTPOST
 Hello World!
+
+![Desktop View](/assets/img/post/avatar.png)
