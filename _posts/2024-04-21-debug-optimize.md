@@ -107,7 +107,7 @@ Debug Classをラッピングする前に[**条件付きコンパイル**](https
 
 IDEで確認してみると、現在のBuild Targetが`Window`, `Mac`, `Linux`であるため、`UNITY_ANDROID`, `UNITY_IOS`の場合、Compile自体がされていないことが確認できます。
 
-これを利用すると簡単に`Unity Editor`のみ、`Debug.Log`が表示されるようにラッピングすること思います。
+これを利用すると簡単に`Unity Editor`のみ、`Debug.Log`が表示されるようにラッピングすることができると思います。
 
 ---
 
