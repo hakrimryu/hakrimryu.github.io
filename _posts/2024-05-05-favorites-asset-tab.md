@@ -31,6 +31,12 @@ Unityで、`Favorites`機能を提供していますが、見づらいと思っ�
 ---
 
 ## 完成したスクリプト共有
+> 2024/05/08 アップデート
+>
+> FavoritesAssetTabに、追加されたアセットをUnityから削除する場合、エラーが発生するバグがありました。
+>
+> OnGUIで、Favorites Asset List Drawするとき、ファイルが存在するかどうかを確認するロジックを追加しました。
+{: .prompt-danger }
 
 ```c#
 using System.Collections.Generic;
@@ -135,7 +141,21 @@ public class AfwFavoritesAssetTab : EditorWindow
 
         // Favorites Asset List Draw
         for (int i = 0; i < _favoriteAssetsList.Count; i++)
-            DrawAssetEntry(_favoriteAssetsList[i], i);
+        {
+            // ファイルが存在するかを確認
+            if (File.Exists(_favoriteAssetsList[i]))
+            {
+                DrawAssetEntry(_favoriteAssetsList[i], i);
+            }
+            else
+            {
+                // ファイルが存在しない場合、リストから削除
+                _favoriteAssetsList.RemoveAt(i);
+                SaveFavoriteAssets(_favoriteAssetsList);
+                // ファイルが存在しないため、Indexは-- 
+                i--;
+            }
+        }
 
         // スクロールビュー終了
         GUILayout.EndScrollView();
